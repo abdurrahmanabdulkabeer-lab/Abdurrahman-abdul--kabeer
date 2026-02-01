@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Paint App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="toolbar" role="toolbar" aria-label="Paint app toolbar">
+    <div class="controls">
+      <label class="control">
+        Color
+        <input type="color" id="colorPicker" value="#1f2937" title="Choose color" />
+      </label>
+
+      <label class="control">
+        Size
+        <input type="range" id="sizeRange" min="1" max="60" value="6" title="Brush size" />
+      </label>
+
+      <button id="brushBtn" class="tool active" aria-pressed="true" title="Brush (B)">Brush</button>
+      <button id="eraserBtn" class="tool" aria-pressed="false" title="Eraser (E)">Eraser</button>
+      <button id="undoBtn" title="Undo (Ctrl+Z)">Undo</button>
+      <button id="redoBtn" title="Redo (Ctrl+Y)">Redo</button>
+      <button id="clearBtn" title="Clear canvas">Clear</button>
+      <button id="saveBtn" title="Save image">Save</button>
+    </div>
+    <div class="info">
+      <small>Tip: Use mouse, touch, or pen. Shortcuts: B brush, E eraser, Ctrl+Z undo, Ctrl+Y redo</small>
+    </div>
+  </header>
+
+  <main class="canvas-wrap">
+    <canvas id="canvas" role="img" aria-label="Drawing canvas"></canvas>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
